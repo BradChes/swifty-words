@@ -59,6 +59,10 @@ class ViewController: UIViewController {
         clear.setTitle("Clear", for: .normal)
         view.addSubview(clear)
         
+        let buttonsView = UIView()
+        buttonsView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(buttonsView)
+        
         NSLayoutConstraint.activate([
             scoreLabel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
             scoreLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
@@ -77,8 +81,15 @@ class ViewController: UIViewController {
             submit.heightAnchor.constraint(equalToConstant: 44),
             clear.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 100),
             clear.centerYAnchor.constraint(equalTo: submit.centerYAnchor),
-            clear.heightAnchor.constraint(equalToConstant: 44)
+            clear.heightAnchor.constraint(equalToConstant: 44),
+            buttonsView.widthAnchor.constraint(equalToConstant: 750),
+            buttonsView.heightAnchor.constraint(equalToConstant: 320),
+            buttonsView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            buttonsView.topAnchor.constraint(equalTo: submit.bottomAnchor, constant: 20),
+            buttonsView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: -20)
         ])
+        
+        buttonsView.backgroundColor = .red
     }
 
     override func viewDidLoad() {
