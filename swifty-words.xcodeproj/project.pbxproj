@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C6E9460A23FAC21700A20BE5 /* swifty-words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swifty-words.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6E9460A23FAC21700A20BE5 /* Swifty Words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swifty Words.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E9460D23FAC21700A20BE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6E9460F23FAC21700A20BE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C6E9461123FAC21700A20BE5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		C6E9460B23FAC21700A20BE5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C6E9460A23FAC21700A20BE5 /* swifty-words.app */,
+				C6E9460A23FAC21700A20BE5 /* Swifty Words.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,7 +84,7 @@
 			);
 			name = "swifty-words";
 			productName = "swifty-words";
-			productReference = C6E9460A23FAC21700A20BE5 /* swifty-words.app */;
+			productReference = C6E9460A23FAC21700A20BE5 /* Swifty Words.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -292,7 +292,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.personal.swifty-words";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Swifty Words";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -310,7 +310,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.personal.swifty-words";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Swifty Words";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
