@@ -156,6 +156,17 @@ class ViewController: UIViewController {
                 
                 present(ac, animated: true)
             }
+        } else {
+            currentAnswer.text = ""
+            for button in activatedButtons {
+                button.isHidden = false
+            }
+            
+            let ac = UIAlertController(title: "Wrong!", message: "Please, try again.", preferredStyle: .alert)
+            
+            ac.addAction(UIAlertAction(title: "Close", style: .default))
+            
+            present(ac, animated: true)
         }
     }
     
