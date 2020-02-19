@@ -17,5 +17,5 @@ Small demonstration as to what the application does when on device.
 </br>
 <p align="center">
 <img src="demo/swifty-words.gif" alt="Application demonstration"
-	title="Swifty Words demonstration" width="750" height="500" />
+	title="Swifty Words demonstration" width="600" height="450" />
 </p>
