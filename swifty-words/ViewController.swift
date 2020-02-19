@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var letterButtons = [UIButton]()
     
     var activatedButtons = [UIButton]()
+    var hiddenButtons = [UIButton]()
     var solutions = [String]()
     
     var score = 0 {
@@ -24,6 +25,7 @@ class ViewController: UIViewController {
             scoreLabel.text = "Score: \(score)"
         }
     }
+    var numberOfItemsMatched = 0
     var level = 1
     
     override func loadView() {
@@ -148,8 +150,9 @@ class ViewController: UIViewController {
             
             currentAnswer.text = ""
             score += 1
+            numberOfItemsMatched += 1
             
-            if score % 7 == 0 {
+            if numberOfItemsMatched % 7 == 0 {
                 let ac = UIAlertController(title: "Well done!", message: "Are you ready for the next level?", preferredStyle: .alert)
                 
                 ac.addAction(UIAlertAction(title: "Let's go!", style: .default, handler: levelUp))
@@ -162,7 +165,9 @@ class ViewController: UIViewController {
                 button.isHidden = false
             }
             
-            let ac = UIAlertController(title: "Wrong!", message: "Please, try again.", preferredStyle: .alert)
+            score -= 1
+            
+            let ac = UIAlertController(title: "Wrong!", message: "Loose a point.", preferredStyle: .alert)
             
             ac.addAction(UIAlertAction(title: "Close", style: .default))
             
