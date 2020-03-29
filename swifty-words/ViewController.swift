@@ -133,7 +133,12 @@ class ViewController: UIViewController {
         
         currentAnswer.text = currentAnswer.text?.appending(buttonTitle)
         activatedButtons.append(sender)
-        sender.isHidden = true
+        
+        UIView.animate(withDuration: 1, delay: 0, options: [], animations: {
+            sender.alpha = 0
+        }) { finished in
+            sender.isHidden = true
+        }
     }
 
     @objc func submitTapped(_ sender: UIButton) {
@@ -161,7 +166,11 @@ class ViewController: UIViewController {
         } else {
             currentAnswer.text = ""
             for button in activatedButtons {
-                button.isHidden = false
+            UIView.animate(withDuration: 0, delay: 0, options: [], animations: {
+                    button.alpha = 1
+                }) { finished in
+                    button.isHidden = false
+                }
             }
             
             score -= 1
@@ -180,14 +189,23 @@ class ViewController: UIViewController {
         solutions.removeAll(keepingCapacity: true)
         performSelector(inBackground: #selector(loadLevel), with: nil)
         for button in letterButtons {
-            button.isHidden = false
+            UIView.animate(withDuration: 0, delay: 0, options: [], animations: {
+                    button.alpha = 1
+                }) { finished in
+                    button.isHidden = false
+                }
         }
     }
     
     @objc func clearTapped(_ sender: UIButton) {
         currentAnswer.text = ""
+
         for button in activatedButtons {
-            button.isHidden = false
+            UIView.animate(withDuration: 0, delay: 0, options: [], animations: {
+                    button.alpha = 1
+                }) { finished in
+                    button.isHidden = false
+                }
         }
         
         activatedButtons.removeAll()
